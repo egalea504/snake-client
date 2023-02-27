@@ -6,16 +6,24 @@ const connect = function (data) {
     port: 50541
   });
 
+  // this takes in data that server sends and displays it in client terminal
   conn.on("data", (data) => {
     console.log("Game says: ", data);
   });
 
+  // message displayed in client terminal as soon as client is connected to game server
+  // also sends name to server - will be displayed on the board
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
+    conn.write("Name: ELI");
   });
 
+  // client sends command to move up - experimented with set interval which moves up every 50ms
   conn.on("connect", () => {
-    conn.write("Name: ELI");
+    // setInterval(() => {
+    //   conn.write("Move: up");;
+    // }, 50);
+
   });
 
 // interpret incoming data as text
