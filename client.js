@@ -2,8 +2,8 @@ const net = require("net");
 
 const connect = function (data) {
   const conn = net.createConnection({
-    host: "localhost",
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   // this takes in data that server sends and displays it in client terminal
@@ -18,13 +18,13 @@ const connect = function (data) {
     conn.write("Name: ELI");
   });
 
-  // client sends command to move up - experimented with set interval which moves up every 50ms
-  conn.on("connect", () => {
-    // setInterval(() => {
-    //   conn.write("Move: up");;
-    // }, 50);
+  // // client sends command to move up - experimented with set interval which moves up every 50ms
+  // conn.on("connect", () => {
+  //   // setInterval(() => {
+  //   //   conn.write("Move: up");;
+  //   // }, 50);
 
-  });
+  // });
 
 // interpret incoming data as text
   conn.setEncoding("utf8");
@@ -36,3 +36,5 @@ module.exports = {
   net,
   connect
 };
+
+const { IP, PORT } = require("./constants");
