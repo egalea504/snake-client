@@ -27,6 +27,15 @@ const handleUserInput = (data) => {
   } else if (data === 'd') {
     connection.write('Move: right');
 
+  } else if (data === "h") {
+    connection.write("Say: Hahaha");
+
+  } else if (data === "j") {
+    connection.write("Say: Watch out!");
+
+  } else if (data === "k") {
+    connection.write("Say: This is fun!");
+
   } else if
   // \u0003 maps to ctrl+c input
   (data === '\u0003') {
