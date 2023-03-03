@@ -8,8 +8,8 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["example of connection established client"](/assets/server_connection client established.png)
-!["example of interactions with the other players"](/assets/canned messages displayed.png)
+!["example of connection established client"](https://github.com/egalea504/snake-client/blob/main/assets/server_connection%20client%20established.png)
+!["example of interactions with the other players"](https://github.com/egalea504/snake-client/blob/main/assets/canned%20messages%20displayed.png)
 
 
 ## Getting Started
