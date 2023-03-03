@@ -15,16 +15,10 @@ const connect = function (data) {
   // also sends name to server - will be displayed on the board
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-    conn.write("Name: ELI");
+    conn.write("Name: EG");
   });
 
-  // // client sends command to move up - experimented with set interval which moves up every 50ms
-  // conn.on("connect", () => {
-  //   // setInterval(() => {
-  //   //   conn.write("Move: up");;
-  //   // }, 50);
-
-  // });
+  // code intended for testing command move up moved to notes_test.js
 
 // interpret incoming data as text
   conn.setEncoding("utf8");
